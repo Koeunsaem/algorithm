@@ -15,7 +15,7 @@ def find_day(m, d):
 day1 = find_day(m1, d1)
 day2 = find_day(m2, d2)
 
-answer = day1-day2
+answer = day2- day1
 while answer < 0:
     answer += 7
 
