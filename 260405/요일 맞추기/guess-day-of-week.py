@@ -16,4 +16,4 @@ total_days -= d1
 
 total_days += 1
 
-print(day[total_days%7])
+print(day[total_days%6])
