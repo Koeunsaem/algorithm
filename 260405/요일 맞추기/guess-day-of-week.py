@@ -3,17 +3,20 @@ m1, d1, m2, d2 = map(int, input().split())
 # Please write your code here.
 
 month = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-day = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+day = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
 
-total_days = 0
-for i in (1, m2):
-    total_days += month[i]
-total_days += d2
+def find_day(m, d):
+    total_days = 0
+    for i in range(1, m):
+        total_days += month[i]
+    total_days += d
+    return total_days
 
-for i in (1, m1):
-    total_days -= month[i]
-total_days -= d1
+day1 = find_day(m1, d1)
+day2 = find_day(m2, d2)
 
-total_days += 1
+answer = day1-day2
+while answer < 0:
+    answer += 7
 
-print(day[total_days%6])
+print(day[answer%7])
