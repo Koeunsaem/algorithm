@@ -4,4 +4,7 @@ a, b, c = map(int, input().split())
 
 answer = a * 24 * 60 + b * 60 + c - (11 * 24 * 60 + 11 * 60 + 11)
 
-print(answer)
+if (answer < 0):
+    print(-1)
+else:
+    print(answer)
